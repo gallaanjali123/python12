@@ -30,7 +30,7 @@ The program should:
 
 ## 3. Flowchart
 
-```
+
 
              START
                |
@@ -89,17 +89,13 @@ The program should:
                    v
                   STOP
 
-```
 
-## 4. Python Source Code
 
-```
-# Student Timetable Conflict Detection# List of unavailable roomsunavailable_rooms = ["R3", "R5"]timetable = []n = int(input("Enter number of courses: "))# Read course detailsfor i in range(n):    print("\nCourse", i + 1)    course = input("Enter course name: ")    day = input("Enter day: ")    start = int(input("Enter start time (24-hour format): "))    end = int(input("Enter end time (24-hour format): "))    room = input("Enter room number: ")    # Store details as a tuple    timetable.append((course, day, start, end, room))print("\n--- TIMETABLE VALIDATION REPORT ---")conflicts = []# Check unavailable roomsfor item in timetable:    course, day, start, end, room = item    if room in unavailable_rooms:        message = course + ": Room " + room + " is unavailable"        conflicts.append(message)# Compare course schedules
-```
+
 
 ## 5. Sample Input
 
-```
+
 
 Enter number of courses: 4
 
@@ -135,9 +131,7 @@ Enter room number: R1
 
 ## 6. Sample Output
 
-```
 
---- TIMETABLE VALIDATION REPORT ---
 
 Conflicts detected:
 - Python and Mathematics have overlapping class periods
@@ -145,12 +139,11 @@ Conflicts detected:
 
 Timetable Status: INVALID
 
---- PROPOSED TIMETABLE ---
+
 ('Python', 'Monday', 9, 11, 'R1')
 ('Mathematics', 'Monday', 10, 12, 'R2')
 ('Physics', 'Tuesday', 9, 11, 'R3')
 ('English', 'Monday', 13, 14, 'R1')
 
-```
 
 
