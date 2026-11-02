@@ -132,7 +132,6 @@ Enter registration ID: ABC26CSE002
 
 ```
 
---- VALIDATION REPORT ---
 
 Email: priya@nri.edu
 Email Status: VALID
@@ -143,7 +142,7 @@ ID Status: VALID
 Overall Status: VALID
 
 
---- VALIDATION REPORT ---
+
 
 Email: ravi@@gmail.com
 Email Status: INVALID
@@ -156,7 +155,6 @@ ID Status: INVALID
 Overall Status: INVALID
 
 
---- VALIDATION REPORT ---
 
 Email: @college.com
 Email Status: INVALID
