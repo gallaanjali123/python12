@@ -84,11 +84,6 @@ Develop a Python program to analyse hypothetical laboratory chemical inventory r
 
 ```
 
-## 4. Python Source Code
-
-```
-    errors = []    name = item["name"]    category = item["category"]    quantity = item["quantity"]    # Check storage category    if category not in storage_rules:        errors.append("Invalid storage category")    else:        # Check maximum quantity        if quantity > storage_rules[category]:            errors.append("Maximum quantity exceeded")    # Check compatibility with other records    for other in inventory:        if name != other["name"]:            pair = (name, other["name"])            reverse_pair = (other["name"], name)            if (pair in incompatible_pairs or                    reverse_pair in incompatible_pairs):                if "Incompatible with " + other["name"] not in errors:                    errors.append("Incompatible with " + other["name"])    # Display result    print("\nChemical:", name)    print("Category:", category)    print("Quantity:", quantity)    if errors:        print("Status: INVALID")        for error in errors:            print("-", error)        invalid_count += 1    else:        print("Status: VALID")        valid_count += 1# Display summaryprint("\n--- FINAL SUMMARY ---")print("Total Records:", n)print("Valid Records:", valid_count)print("Invalid Records:", invalid_count)
-```
 
 ## 5. Sample Input
 
@@ -120,10 +115,6 @@ Enter quantity: 10
 
 ## 6. Sample Output
 
-```
-
---- INVENTORY VALIDATION REPORT ---
-
 Chemical: ChemicalA
 Category: A
 Quantity: 30.0
@@ -148,11 +139,10 @@ Quantity: 10.0
 Status: INVALID
 - Invalid storage category
 
---- FINAL SUMMARY ---
+
 Total Records: 4
 Valid Records: 0
 Invalid Records: 4
 
-```
 
-Note: The program uses hypothetical rules for learning Python lists, dictionaries, loops, conditions, and validation.
+
