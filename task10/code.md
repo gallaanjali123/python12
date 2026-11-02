@@ -107,11 +107,6 @@ Registration ID format:
 
 ```
 
-## 4. Python Source Code
-
-```
-# Student Email and Identifier Validationimport stringdef validate_email(email):    errors = []    # Check @ symbol    if email.count("@") != 1:        errors.append("Email must contain exactly one @ symbol")        return errors    username, domain_part = email.split("@")    # Check missing username    if username == "":        errors.append("Missing username")    # Check missing domain    if domain_part == "":        errors.append("Missing domain")    # Validate username    if username:        allowed_username = (            string.ascii_letters +            string.digits + "._"        )        for ch in username:            if ch not in allowed_username:                errors.append("Invalid character in username")                break
-```
 
 ## 5. Sample Input
 
@@ -174,17 +169,7 @@ ID Status: INVALID
 Overall Status: INVALID
 
 
---- FINAL SUMMARY ---
-Total Students: 3
-Valid Records: 1
-Invalid Records: 2
 
-```
 
-## 7. Result
-
-The Python program successfully validates student email-like strings and registration identifiers. It identifies malformed separators, invalid characters, missing components, and incorrect identifier formats, and displays detailed validation reports.
-
-Python concepts used: Strings, functions, lists, loops, conditional statements, string slicing, `split()`, `count()`, `isalpha()`, `isdigit()`, and `isupper()`.
 
 
