@@ -76,13 +76,7 @@ Process multiple traffic violations based on vehicle category, offence type, rep
 
 ```
 
-## 4. Python Source Code
 
-This is a simple educational example using predefined sample fine amounts, not actual legal traffic-fine rates.
-
-```
-# Traffic Violation Penalty Calculatorfine_rules = {    "overspeeding": 1000,    "no_helmet": 500,    "no_seatbelt": 500,    "signal_jump": 1000,    "drunk_driving": 5000}disqualification_offences = ["drunk_driving"]total_penalty = 0disqualified = Falsen = int(input("Enter number of violations: "))for i in range(n):    print("\nViolation", i + 1)    vehicle = input("Enter vehicle category (Two-wheeler/Four-wheeler): ").lower()    offence = input("Enter offence type: ").lower()    repeat = input("Is it a repeat offence? (yes/no): ").lower()    if offence in fine_rules:        fine = fine_rules[offence]        if repeat == "yes":            fine = fine * 2        total_penalty += fine
-```
 
 ## 5. Sample Input
 
@@ -126,10 +120,3 @@ Offence: drunk_driving
 Final Fine: Rs. 5000
 Disqualification Condition: Yes
 
------ FINAL PENALTY REPORT -----
-Total Penalty: Rs. 7500
-Status: Disqualification condition identified
-Program Completed
-```
-
-Note: The program doubles the fine for repeat offences. For this demonstration, drunk driving is treated as a disqualification condition. Actual penalties and legal disqualification rules depend on applicable traffic laws.
