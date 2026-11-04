@@ -94,11 +94,7 @@ The program should:
 
 ```
 
-## 4. Python Source Code
 
-```
-# Repeated Transaction Detectiontransactions = []# Read transaction detailsn = int(input("Enter number of transactions: "))for i in range(n):    print("\nTransaction", i + 1)    trans_id = input("Enter transaction ID: ")    amount = float(input("Enter transaction amount: "))    transactions.append((trans_id, amount))# Read thresholdthreshold = float(input("\nEnter transaction threshold: "))# Find duplicate transaction IDsduplicate_ids = []for i in range(len(transactions)):    for j in range(i + 1, len(transactions)):        if transactions[i][0] == transactions[j][0]:            if transactions[i][0] not in duplicate_ids:                duplicate_ids.append(transactions[i][0])# Generate suspicious transaction listsuspicious = []for trans_id, amount in transactions:
-```
 
 ## 5. Sample Input
 
@@ -162,8 +158,3 @@ Suspicious Entries: 4
 
 ```
 
-## 7. Result
-
-The Python program successfully detects duplicate transaction identifiers, identifies transactions exceeding the specified amount threshold, and generates a list of suspicious entries.
-
-Python concepts used: Lists, tuples, nested loops, conditional statements, string comparison, and list operations.
