@@ -94,11 +94,6 @@ The program should explain every failed condition and display whether each passw
 
 ```
 
-## 4. Python Source Code
-
-```
-# Password Policy Validation Engineimport string# Password policy rulesMIN_LENGTH = 8prohibited_words = ["password", "admin", "1234"]n = int(input("Enter number of passwords: "))valid_count = 0invalid_count = 0# Validate each passwordfor i in range(n):    password = input("\nEnter password: ")    errors = []    # Check minimum length    if len(password) < MIN_LENGTH:        errors.append("Password must contain at least 8 characters")    # Check uppercase letter    if not any(ch.isupper() for ch in password):        errors.append("Missing uppercase letter")    # Check lowercase letter    if not any(ch.islower() for ch in password):        errors.append("Missing lowercase letter")    # Check digit    if not any(ch.isdigit() for ch in password):
-```
 
 ## 5. Sample Input
 
@@ -145,10 +140,4 @@ Valid Passwords: 1
 Invalid Passwords: 2
 
 ```
-
-## 7. Result
-
-The Python program successfully validates passwords using minimum length, character categories, repetition restrictions, and prohibited substring rules. It also explains each failed condition and displays the total number of valid and invalid passwords.
-
-Python concepts used: Strings, lists, loops, conditional statements, `any()`, `isupper()`, `islower()`, `isdigit()`, and string operations.
 
