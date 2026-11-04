@@ -144,8 +144,3 @@ Minimum Delivery Charge: Rs. 180.0
 
 ```
 
-## 7. Result
-
-The Python program successfully validates parcel details, checks courier service restrictions, calculates delivery charges, compares eligible services, and selects the courier service with the lowest delivery cost.
-
-Concepts used: Python dictionaries, tuples, lists, loops, conditional statements, functions such as `max()` and `min()`, and arithmetic operations.
