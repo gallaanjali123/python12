@@ -91,11 +91,7 @@ The program should:
 
 ```
 
-## 4. Python Source Code
 
-```
-    elif consumption <= 200:        water_charge = (100 * 2) + ((consumption - 100) * 3)    else:        water_charge = (100 * 2) + (100 * 3) + \                       ((consumption - 200) * 5)    # Add fixed fee    bill = water_charge + fixed_fee    # Apply excessive usage penalty    extra_penalty = 0    if consumption > excess_limit:        extra_penalty = penalty        bill += extra_penalty    # Store household details    households.append((name, consumption, bill, extra_penalty))    total_revenue += bill# Display household billsprint("\n--- WATER BILL REPORT ---")for item in households:    name, consumption, bill, extra_penalty = item    print("\nHousehold:", name)    print("Consumption:", consumption, "litres")    print("Water Charge: Rs.", round(bill - fixed_fee - extra_penalty, 2))    print("Fixed Fee: Rs.", fixed_fee)    print("Penalty: Rs.", extra_penalty)    print("Total Bill: Rs.", round(bill, 2))    if consumption > excess_limit:        print("Usage Status: EXCESSIVE")    else:        print("Usage Status: NORMAL")# Find highest water consumptionhighest = max(households, key=lambda x: x[1])print("\n--- CONSUMPTION ANALYSIS ---")print("Highest Consumption Household:", highest[0])print("Highest Water Usage:", highest[1], "litres")# Calculate average consumptionaverage = sum(item[1] for item in households) / nprint("Average Water Consumption:", round(average, 2), "litres")# Display total revenueprint("\nTotal Revenue: Rs.", round(total_revenue, 2))
-```
 
 ## 5. Sample Input
 
@@ -156,8 +152,3 @@ Total Revenue: Rs. 1750.0
 
 ```
 
-## 7. Result
-
-The Python program successfully calculates progressive water bills for multiple households, applies fixed fees and excessive usage penalties, compares consumption patterns, identifies the household with the highest water usage, and calculates total revenue.
-
-Python concepts used: Lists, tuples, loops, conditional statements, arithmetic operations, `max()`, and `sum()`.
