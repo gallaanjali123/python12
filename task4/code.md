@@ -99,11 +99,6 @@ The program should also display ineligible services with their reasons for rejec
 
 ```
 
-## 4. Python Source Code
-
-```
-    reasons = []    if billable_weight > details["max_weight"]:        reasons.append("Weight limit exceeded")    if max(length, width, height) > details["max_dimension"]:        reasons.append("Dimension limit exceeded")    if zone not in details["zones"]:        reasons.append("Distance zone not supported")    if urgency not in details["urgencies"]:        reasons.append("Urgency not supported")    if restriction not in details["restrictions"]:        reasons.append("Restriction not supported")    if reasons:        rejected_services[name] = reasons        print("\n", name, "- NOT ELIGIBLE")        for reason in reasons:            print("-", reason)    else:        # Hypothetical charge calculation        weight_charge = billable_weight * 10        zone_charge = {            "Local": 20,            "Regional": 50,            "National": 100        }        urgency_charge = {            "Normal": 0,            "Urgent": 50        }        total_charge = (            details["base_charge"]            + weight_charge            + zone_charge[zone]            + urgency_charge[urgency]        )        eligible_services.append((name, total_charge))        print("\n", name, "- ELIGIBLE")        print("Delivery Charge: Rs.", round(total_charge, 2))# Select the cheapest eligible serviceprint("\n--- FINAL RESULT ---")if eligible_services:    best_service = min(eligible_services, key=lambda x: x[1])    print("Selected Courier:", best_service[0])    print("Minimum Delivery Charge: Rs.",          round(best_service[1], 2))else:    print("No eligible courier service available.")
-```
 
 ## 5. Sample Input
 
