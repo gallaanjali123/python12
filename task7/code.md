@@ -80,11 +80,6 @@ The program should:
 
 ```
 
-## 4. Python Source Code
-
-```
-            if j == 0 or j == 2 * i:                print("*", end="")            else:                print(" ", end="")        print()elif choice == 2:    print("\n--- SYMMETRIC NUMBER PATTERN ---")    mid = n // 2    # Upper half    for i in range(mid + 1):        # Leading spaces        print(" " * (mid - i), end="")        # Increasing numbers        for j in range(1, i + 2):            print(j, end="")        # Decreasing numbers        for j in range(i, 0, -1):            print(j, end="")        print()    # Lower half    for i in range(mid - 1, -1, -1):        print(" " * (mid - i), end="")        for j in range(1, i + 2):            print(j, end="")        for j in range(i, 0, -1):            print(j, end="")        print()else:    print("Invalid choice! Select 1 or 2.")
-```
 
 ## 5. Sample Input 1
 
@@ -170,8 +165,3 @@ Invalid dimension! Enter a positive odd number.
 
 ```
 
-## 11. Result
-
-The Python program successfully generates hollow diamond and symmetric numerical patterns using nested loops. It also validates user-specified dimensions and displays an error message for invalid input.
-
-Python concepts used: Nested loops, `range()`, conditional statements, string multiplication, arithmetic operations, and input validation.
